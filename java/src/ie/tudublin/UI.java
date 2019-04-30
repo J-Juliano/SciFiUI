@@ -17,8 +17,14 @@ public class UI extends PApplet
     Radar radar;
     Radar radar2;
 
-    Button b;
+    Button b1;
+    Button b2;
+    Button b3;
+    Button b4;
+    Button b5;
+
     Time time;
+    
     Spider spider;
 
     boolean[] keys = new boolean[1024];
@@ -160,9 +166,13 @@ public class UI extends PApplet
   
     public void setup()
     {
+        b1 = new Button(this, 50, 50, 150, 75, "Classic Suit");
+        b2 = new Button(this, 215, 50, 150, 75, "Noir Suit");
+        b3 = new Button(this, 50, 150, 150, 75, "Stealth Suit");
+        b4 = new Button(this, 215, 150, 150, 75, "Iron Spider Suit");
+        b5 = new Button(this, 50, 250, 150, 75, "Mark IV Suit");
+        
 
-        b = new Button(this, 50, 50, 100, 50, "Button");
-        //mc = new MovingCircle(this, width / 2, height * .75f, 50);
         radar = new Radar(this, 1, 850, 550, 120);// speed,x,y
         radar2 = new Radar(this, 1, 150, 550, 120);// speed,x,y
         
@@ -171,7 +181,7 @@ public class UI extends PApplet
 
         spider = new Spider(this);
 
-        //
+        
         
     }
 
@@ -188,7 +198,12 @@ public class UI extends PApplet
         //Invoke method to drawSpider
         spider.drawSpider();
 
-        b.render();
+        
+        b1.render();
+        b2.render();
+        b3.render();
+        b4.render();
+        b5.render();
         
         //Invoke method to draw Radars
         fill(0);
