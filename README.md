@@ -155,6 +155,8 @@ public void loadSuits()
 
     }
 ```
+![An image](images/suits.png)
+![An image](images/suitsStats.png)
 
 # What I am most proud of in the assignment
 Even though the user interface is very basic and simplistic, I have grasped a decent understanding of how java and processing works. I'm not as proud of the assignment as I would like since I feel I should had put more work into it that it deserves.
@@ -163,7 +165,7 @@ However, the thing that I am proud is that I got a grasp of how java and process
 
 # Images
 
-![An image] (images/UI.png)
+![An image](images/interface.png)
 
 
 # Youtube
