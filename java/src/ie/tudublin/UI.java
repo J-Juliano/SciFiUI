@@ -26,6 +26,7 @@ public class UI extends PApplet
     Button b5;
 
     Time time;
+    
     Spider spider;
 
     boolean[] keys = new boolean[1024];
@@ -53,9 +54,12 @@ public class UI extends PApplet
         loadSuits();
         printSuits();
        
-       
     }
 
+    /**
+     * loadSuits()
+     * Accesses suits.csv file and populates data into suit arrayList
+     */
     public void loadSuits()
     {
         Table table = loadTable("suits.csv", "header");
@@ -64,7 +68,6 @@ public class UI extends PApplet
             Suit a = new Suit(tr);
             suits.add(a);
             
-            //suits.add(new Suit(tr));
         }   
 
     }
@@ -78,6 +81,10 @@ public class UI extends PApplet
     
     }
 
+    /**
+     * Method that takes in a parameter and depending of the value prints out the set of data.
+     * @param j
+     */
     public void printSuitInfo(int j)
     {   
 
@@ -91,6 +98,10 @@ public class UI extends PApplet
         }
     }
 
+    /**
+     * MouseClicked()
+     * Method is use to act as buttons and locates the position of the x and y of the cursor.
+     */
     public void mouseClicked()
     {
         
@@ -135,13 +146,14 @@ public class UI extends PApplet
 
     public void setup()
     {
+        //Creating the buttons
         b1 = new Button(this, 50, 50, 150, 75, "Classic Suit");
         b2 = new Button(this, 215, 50, 150, 75, "Noir Suit");
         b3 = new Button(this, 50, 150, 150, 75, "Stealth Suit");
         b4 = new Button(this, 215, 150, 150, 75, "Iron Spider Suit");
         b5 = new Button(this, 50, 250, 150, 75, "Mark IV Suit");
         
-
+        //creating the Radar
         radar = new Radar(this, 1, 850, 550, 120);// speed,x,y
         radar2 = new Radar(this, 1, 150, 550, 120);// speed,x,y
         
