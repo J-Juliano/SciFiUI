@@ -11,14 +11,14 @@ The Task of this assignment was to create a SciFi user interface using the knowl
 # Instructions
 There is not much interactivity with the user interface as it is mainly just visual.
 
-1)The 3 circles at the bottom of the screen represent the time and it constantly updates the actual time as it were in real life when the program is run.
+1)The 3 circles at the bottom of the screen represent the time and it constantly updates the time from the computer system
 
-2)The radar at the bottom right corner and the spider in the middle of the screen are just drawings and no interactivity.
+2)The radar at the bottom right corner and the spider in the middle of the screen are just drawings and have no interactivity.
 
-3)The buttons at the top left of the screen shows the different types of suits and if it is clicked it shows the data of the suit that is clicked on 
+3)The buttons at the top left of the screen shows the different buttons with types of suits and if it is clicked it shows the details of the suit (Health, Attack,Agility etc.) depending on what button is clicked.
 
 # How it works
-The spider in the middle of the screen was drawn by the use of a spider class and just simple processing references such as ellipse() and line().
+The spider in the middle of the screen was drawn by the use of a spider class and just simple processing references such as ellipse() and line(). The ellipse is use to create the head and the body while the lines are used to create the legs of the spider.
 
 ```Java
 public void drawSpider() 
@@ -54,7 +54,7 @@ public void drawSpider()
     }	
 ```
 
-The time at the bottom middle of the screen displays the current system time from the computer system
+The time at the bottom middle of the screen displays the current time from the computer system. Processing references is used (second(),minute(),hour() and are placed into variables which are updated every time the update() function runs. The Time are surrounded by circles just for design.
 
 ```Java
 public void render()
@@ -80,8 +80,8 @@ public void render()
     }
 ```
 
-The tables located at the top left and right of the screen
-
+The tables located at the top left and right of the screen represent the different type of suits with their designated buttons. If a button is clicked it prints out the data for that specific suit. In order to achieve this a .csv file is created to hold data. Then I created two array lists to be populated. The loadSuits() method is use to simply populate the array. The printSuitInfo() method is use to print out all the data set of the specific suit. It passes a parameter 'j' and depending on what value prints out the data set to the UI. The
+mouseClicked() is just use to give the Ui some interactivity. It calculates where the cursor is with the use of many 'if' statements. Depending on which if statement gets triggered then it gets the data set from the assigned index and sets the value(parameter) to the same value of the ndex which is then passed on to the printSuitInfo() to print out the data set.
 
 ```Java
     
@@ -157,11 +157,13 @@ public void loadSuits()
 ```
 
 # What I am most proud of in the assignment
-Even though the user interface is very basic and simplistic, I have grasped a decent understanding of how java and processing works
+Even though the user interface is very basic and simplistic, I have grasped a decent understanding of how java and processing works. I'm not as proud of the assignment as I would like since I feel I should had put more work into it that it deserves.
+
+However, the thing that I am proud is that I got a grasp of how java and processing works and have a decent understanding of its capabilites. The project was quite enjoyable especially that we had the option to base it off something that we have some interesting of.
 
 # Images
 
-(images/UI.png)
+![An image] (images/UI.png)
 
 
 # Youtube
